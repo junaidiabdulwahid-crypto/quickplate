@@ -9,7 +9,7 @@ export const REDIS = Symbol('REDIS');
   providers: [
     {
       provide: REDIS,
-      useFactory: () => new Redis(process.env.REDIS_URL ?? 'redis://localhost:6380', { maxRetriesPerRequest: 2 }),
+      useFactory: () => new Redis(process.env.REDIS_URL ?? 'redis://localhost:63790', { maxRetriesPerRequest: 2 }),
     },
   ],
   exports: [REDIS],

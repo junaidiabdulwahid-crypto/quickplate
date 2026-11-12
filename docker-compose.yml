@@ -1,12 +1,13 @@
 services:
   db:
     image: postgis/postgis:16-3.4
+    platform: linux/amd64   # the official PostGIS image is Intel-only; Docker Desktop runs it via Rosetta on Apple Silicon
     environment:
       POSTGRES_USER: quickplate
       POSTGRES_PASSWORD: quickplate
       POSTGRES_DB: quickplate
     ports:
-      - "5434:5432"
+      - "54340:5432"
     volumes:
       - ./db:/docker-entrypoint-initdb.d:ro
       - pgdata:/var/lib/postgresql/data
@@ -17,6 +18,6 @@ services:
   redis:
     image: redis:7-alpine
     ports:
-      - "6380:6379"
+      - "63790:6379"
 volumes:
   pgdata:

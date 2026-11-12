@@ -30,7 +30,7 @@ Built with **NestJS + TypeScript**, **PostgreSQL + PostGIS**, **Redis** and **Ne
 ## Run it
 
 ```bash
-docker compose up -d                                   # PostgreSQL + PostGIS on :5434, Redis on :6380
+docker compose up -d                                   # PostgreSQL + PostGIS on :54340, Redis on :63790
 
 cd api && cp ../.env.example .env                      # set JWT_SECRET (openssl rand -hex 32)
 pnpm install && pnpm build && pnpm start               # API on :3200

@@ -1,0 +1,15 @@
+{
+  "name": "quickplate-paysim",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PaySim: a pretend Razorpay-style payment gateway for local development (no real money)",
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-strip-types --no-warnings server.ts",
+    "typecheck": "tsc --noEmit --strict --target ES2022 --module nodenext --moduleResolution nodenext --allowImportingTsExtensions --types node server.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
